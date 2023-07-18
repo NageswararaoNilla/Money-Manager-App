@@ -1,1 +1,33 @@
-/* Write your CSS here */
+.list-item-container {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  border: 1px solid #cbd5e1;
+  padding: 0px 8px;
+  margin: 0;
+}
+
+.delete-btn {
+  border: none;
+  background-color: #ffffff;
+  outline: none;
+  cursor: pointer;
+}
+
+.title {
+  margin-left: 5px;
+  width: 80px;
+}
+
+.amount {
+  width: 80px;
+}
+
+.type {
+  width: 80px;
+}
+
+.delete-icon {
+  width: 20px;
+  height: 20px;
+}
