@@ -1,10 +1,37 @@
-.list-item-container {
+.table-row {
   list-style-type: none;
   display: flex;
-  align-items: center;
-  border: 1px solid #cbd5e1;
-  padding: 0px 8px;
-  margin: 0;
+  justify-content: space-between;
+  border-bottom: 1px solid #cbd5e1;
+  border-left: 1px solid #cbd5e1;
+  border-right: 1px solid #cbd5e1;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .table-row {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+.transaction-text {
+  color: #475569;
+  font-family: 'Roboto';
+  font-size: 12px;
+  width: 30%;
+}
+
+@media screen and (min-width: 768px) {
+  .transaction-text {
+    font-size: 14px;
+  }
+}
+
+.delete-container {
+  display: flex;
+  width: 10%;
 }
 
 .delete-btn {
@@ -14,20 +41,17 @@
   cursor: pointer;
 }
 
-.title {
-  margin-left: 5px;
-  width: 80px;
-}
-
-.amount {
-  width: 80px;
-}
-
-.type {
-  width: 80px;
-}
-
-.delete-icon {
+.delete-img {
+  background: transparent;
   width: 20px;
   height: 20px;
+  align-self: center;
+  border: none;
+  outline: none;
+}
+
+@media screen and (min-width: 768px) {
+  .delete-img {
+    margin-right: 24px;
+  }
 }

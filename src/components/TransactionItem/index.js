@@ -1,30 +1,32 @@
 import './index.css'
 
 const TransactionItem = props => {
-  const {transactionDetails, onDelete} = props
+  const {transactionDetails, deleteTransaction} = props
   const {id, title, amount, type} = transactionDetails
 
-  const onDeleteHistory = () => {
-    onDelete(transactionDetails)
+  const onDeleteTransaction = () => {
+    deleteTransaction(id)
   }
 
   return (
-    <li className="list-item-container" key={id}>
-      <p className="title">{title}</p>
-      <p className="amount">Rs {amount}</p>
-      <p className="type">{type}</p>
-      <button
-        type="button"
-        className="delete-btn"
-        data-testid="delete"
-        onClick={onDeleteHistory}
-      >
-        <img
-          src="https://assets.ccbp.in/frontend/react-js/money-manager/delete.png"
-          alt="delete"
-          className="delete-icon"
-        />
-      </button>
+    <li className="table-row" key={id}>
+      <p className="transaction-text">{title}</p>
+      <p className="transaction-text">Rs {amount}</p>
+      <p className="transaction-text">{type}</p>
+      <div className="delete-container">
+        <button
+          type="button"
+          className="delete-btn"
+          data-testid="delete"
+          onClick={onDeleteTransaction}
+        >
+          <img
+            src="https://assets.ccbp.in/frontend/react-js/money-manager/delete.png"
+            alt="delete"
+            className="delete-img"
+          />
+        </button>
+      </div>
     </li>
   )
 }
